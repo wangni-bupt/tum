@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_28ca3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28ca3.dir/build.make CMakeFiles/cmTC_28ca3.dir/build
+make[1]: Entering directory '/home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28ca3.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_28ca3.dir/CheckSymbolExists.c.o   -c /home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_28ca3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28ca3.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_28ca3.dir/CheckSymbolExists.c.o  -o cmTC_28ca3 -rdynamic 
+CMakeFiles/cmTC_28ca3.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0xa)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_28ca3.dir/build.make:97: recipe for target 'cmTC_28ca3' failed
+make[1]: *** [cmTC_28ca3] Error 1
+make[1]: Leaving directory '/home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_28ca3/fast' failed
+make: *** [cmTC_28ca3/fast] Error 2
+
+File /home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e943e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e943e.dir/build.make CMakeFiles/cmTC_e943e.dir/build
+make[1]: Entering directory '/home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e943e.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e943e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e943e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e943e.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_e943e.dir/CheckFunctionExists.c.o  -o cmTC_e943e -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e943e.dir/build.make:97: recipe for target 'cmTC_e943e' failed
+make[1]: *** [cmTC_e943e] Error 1
+make[1]: Leaving directory '/home/wangni/tum/lvbo/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_e943e/fast' failed
+make: *** [cmTC_e943e/fast] Error 2
+
+

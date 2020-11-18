@@ -1,0 +1,3 @@
+/home/wangni/tum/tiqu/build/CMakeFiles/edit_cache.dir
+/home/wangni/tum/tiqu/build/CMakeFiles/rebuild_cache.dir
+/home/wangni/tum/tiqu/build/CMakeFiles/main.dir
